@@ -9,8 +9,6 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_pinned_shortcut/flutter_pinned_shortcut.dart';
 import './firebase_options.dart';
 import './colors/app_color.dart';
-
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);

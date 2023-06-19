@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_demo_app/custom_widgets/custom_bottom_nav.dart';
 import 'package:firebase_demo_app/helper/helper.dart';
-import 'package:firebase_demo_app/main_screen/chat/chat_view.dart';
 import 'package:firebase_demo_app/main_screen/discovery/discovery_view.dart';
 import 'package:firebase_demo_app/main_screen/home/home_view.dart';
 import 'package:firebase_demo_app/main_screen/profile/profile_view.dart';
@@ -20,7 +19,6 @@ import '../main_screen/main_screen_state.dart';
 import '../main_screen/form/form_view.dart';
 class MainScreenCubit extends Cubit<MainScreenState> {
   MainScreenCubit() : super(const MainScreenState()){
-    addPages();
     Helper.getUsersDetails();
   }
 
@@ -72,22 +70,9 @@ class MainScreenCubit extends Cubit<MainScreenState> {
     });
   }
 
-  void pageOnchange(int index) {
-    emit(state.copyWith(selectedPage: index));
-    print(state.selectedPage);
-  }
 
-  void addPages() {
-    List<Widget> tempPages = state.pages;
-    tempPages=[
-      const HomeView(),
-      const DiscoveryView(),
-      const FormView(),
-      const ChatView(),
-      const ProfileView(),
-    ];
-    emit(state.copyWith(pages: tempPages));
-  }
+
+
 
 
   void updateTab(BottomNavigationState navigationState){

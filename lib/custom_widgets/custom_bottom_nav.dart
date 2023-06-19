@@ -14,7 +14,11 @@ class BottomNavBar extends StatelessWidget {
       const BottomNavItem(icon: Icons.home, navigationState: BottomNavigationState.home,label: "home"),
       const BottomNavItem(icon: Icons.location_on_outlined, navigationState: BottomNavigationState.discovery,label: "discovery"),
       const BottomNavItem(icon: Icons.calendar_month_outlined, navigationState: BottomNavigationState.form,label: "form"),
+<<<<<<< HEAD
       const BottomNavItem(icon: Icons.message, navigationState: BottomNavigationState.chat,label: "message"),
+=======
+      const BottomNavItem(icon: Icons.notification_add, navigationState: BottomNavigationState.notification,label: "notification"),
+>>>>>>> third commit
       const BottomNavItem(icon: Icons.people, navigationState: BottomNavigationState.profile,label: "home"),
     ];
     return Container(
@@ -43,7 +47,11 @@ class BottomNavItem extends StatelessWidget {
         children: [
           Icon(icon ,color: isSelected?Colors.white:Colors.white.withOpacity(0.5),size: 30,),
           const SizedBox(height: 3,),
+<<<<<<< HEAD
           Text(label,style: TextStyle(color: isSelected?Colors.white:Colors.white.withOpacity(0.5),),)
+=======
+          Text(label,style: TextStyle(color: isSelected?Colors.white:Colors.white.withOpacity(0.5), fontSize: 12),)
+>>>>>>> third commit
         ],
       ),
     );
@@ -69,4 +77,8 @@ class Style extends StyleHook {
   }
 }
 
+<<<<<<< HEAD
 enum BottomNavigationState { home, discovery, form, chat, profile }
+=======
+enum BottomNavigationState { home, discovery, form, notification, profile }
+>>>>>>> third commit

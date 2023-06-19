@@ -45,9 +45,13 @@ class FormView extends StatelessWidget {
                       const Text("Gender:", style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13)),
                       Row(
                         children: context.watch<MyFormCubit>().state.genderList.map((e) => Expanded(
+<<<<<<< HEAD
                                 child: RadioListTile(
                                   visualDensity: const VisualDensity(
                                       horizontal: VisualDensity.minimumDensity, vertical: VisualDensity.minimumDensity),
+=======
+                                child: RadioListTile(visualDensity: const VisualDensity(horizontal: VisualDensity.minimumDensity, vertical: VisualDensity.minimumDensity),
+>>>>>>> third commit
                                   materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                                   activeColor: AppColor.primaryColor,
                                   contentPadding: EdgeInsets.zero,
