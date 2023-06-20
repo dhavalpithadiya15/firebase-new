@@ -49,7 +49,7 @@ class MainScreenView extends StatelessWidget {
                 child =const DiscoveryView();
               case BottomNavigationState.form:
                 child =const FormView();
-              case BottomNavigationState.chat:
+              case BottomNavigationState.notification:
                 child =const ProfileView();
               case BottomNavigationState.profile:
                 child =const ProfileView();
